@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { LikesComponent } from './likes/likes.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CheckAllComponent } from './check-all/check-all.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LikesComponent
+    LikesComponent,
+    CheckAllComponent,
+   
   ],
   imports: [
     BrowserModule,
