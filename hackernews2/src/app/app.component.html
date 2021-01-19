@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Today's article</h2>
+
+  <div class="input-group" style="width: 800px;">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+      aria-describedby="search-addon" />
+    <button type="button"  class="btn btn-warning">search</button>
+  </div><br>
+
+  <h6>Name:</h6>
+    <textarea type="text" placeholder="Title" [(ngModel)]="titles" cols="70"></textarea>
+    <br>
+    <h6>Link:</h6>
+    <textarea type="text" placeholder="Url" [(ngModel)]="urls" cols="70"></textarea>
+    <br><br>
+    <button (click)="add()" class="btn btn-outline-success"> Them Moi </button>
+    <div *ngFor="let art of articles">
+        <h4 [ngStyle]="{color: 'green'}">
+            <b>{{art.title}}</b>
+        </h4>
+        <p><a href="{{art.url}}" target="_blank">{{art.url}}</a></p>
+        <app-likes></app-likes>
+    </div>
+</body>
+</html>
